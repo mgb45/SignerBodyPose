@@ -93,7 +93,7 @@ for j = 15:length(Files)
     measurementL = [testVid.joints_x(3,j);testVid.joints_y(3,j);testVid.joints_x(1,j);testVid.joints_y(1,j);testVid.joints_x(3,j);testVid.joints_y(3,j)+45;c2;r2];
     
     
-    % Update pose estimate using measurement
+    % Update pose estimate using measurement and random set of trajectories
     indicators_r = randsample(1:length(model_right.init_weights),nParticles,true,model_right.init_weights);
     indicators_l = randsample(1:length(model_left.init_weights),nParticles,true,model_left.init_weights);
     state_right = updatePoseEstimate_MKF(model_right,measurementR,indicators_r,state_right);

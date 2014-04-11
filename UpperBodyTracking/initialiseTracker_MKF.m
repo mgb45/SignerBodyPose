@@ -4,6 +4,7 @@ N = length(Weights);
 d = size(Covs,2);
 
 Xk_k = cell(N,1);
+Pk_k = cell(N,1);
 
 % State selection for measurement
 H = [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0;

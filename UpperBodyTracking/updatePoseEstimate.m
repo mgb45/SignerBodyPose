@@ -18,7 +18,8 @@ for i = 1:length(model.w) % Integrate conditionals with KF
     model.Pk_k(d*i-(d-1):d*i,:) = (eye(d) - K*model.H)*Pk_k_1;
 end
 
-% Reset if GMM collapses
+% Reset if GMM collapses -- happens when mislabeled images cause zero
+% weights
 if (sum(model.w) == 0)
     model.w = model.init_weights';
 end
