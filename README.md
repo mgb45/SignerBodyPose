@@ -7,4 +7,4 @@ Performs 3D upper body pose estimation on the RWTH+Phoenix sign language corpus 
 
 To use, download and extract the corpus into the root folder of the repository, then run demo.m
 
-More details can be obtained at http://arxiv.org/pdf/1405.5047v1.pdf
+More details can be obtained at http://arxiv.org/abs/1405.5047
